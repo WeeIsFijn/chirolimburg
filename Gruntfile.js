@@ -49,7 +49,7 @@
             '<%= frontend_src %>/css/**/*.css',
             '<%= frontend_src %>/less/**/*.less'
           ],
-          tasks: ['copy:dev', 'less:dev', 'copy:bootstrap'],
+          tasks: ['copy:dev', 'less:dev', 'copy:bootstrapDev'],
           options: {
             livereload: true
           }

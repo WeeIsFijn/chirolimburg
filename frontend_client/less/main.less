@@ -6,6 +6,7 @@
 @secondary: #505050;
 @tertiary: #FEFEFE;
 @four: #B5B3B3;
+@five: #E8B727;
 
 //Core Styles
 body {
@@ -94,7 +95,7 @@ h1{
   background-color: red;
 }
 .logo-image {
-  width: 60%;
+  width: 30%;
   display: block;
   margin: 0 auto;
   padding-top: 20vh;
@@ -117,9 +118,14 @@ h1{
 }
 .large-background-image {
   background: url('../img/krinkel.png') center center no-repeat;
-  min-height: 90vh;
+  min-height: 100vh;
   background-size: cover;
 }
+
+.full-screen{
+  min-height: 100vh;
+}
+
 p {
   font-size: 1rem;
 }
@@ -204,7 +210,7 @@ p {
   }
 }
 .footer {
-  background-color: #00BF8C;
+  background-color: @five;
   min-height: 10vh;
 }
 .disclaimer {

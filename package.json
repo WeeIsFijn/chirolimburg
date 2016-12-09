@@ -1,12 +1,12 @@
 {
-  "name": "chirolimburg-landingpage",
+  "name": "chiro-limburg-landingpage",
   "version": "0.0.1",
   "description": "Landing page for Chiro Limburg",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "exit 1"
   },
-  "author": "",
+  "author": "Wouter Deferme",
   "license": "ISC",
   "devDependencies": {
     "grunt": "^0.4.5",

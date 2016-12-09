@@ -153,7 +153,6 @@
     });
 
     grunt.registerTask('default', ['copy:dev', 'less:dev', 'build-bootstrap', 'copy:bootstrapDev', 'connect:dev', 'watch:livereload']);
-    grunt.registerTask('dash', ['copy:dashboard', 'less:dashboard', 'build-bootstrap', 'copy:bootstrapDash', 'connect:dashboard', 'watch:dashboard']);
 
   };
 })();

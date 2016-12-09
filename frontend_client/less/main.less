@@ -6,25 +6,300 @@
 @secondary: #505050;
 @tertiary: #FEFEFE;
 @four: #B5B3B3;
+@five: #E8B727;
 
 //Core Styles
-body{
-	font-family: 'Open Sans', sans-serif;
-	color: secondary;
-	font-size: 14px;
-	font-weight: bold;
-	background: tertiary;
-	overflow-x: hidden;
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: @secondary;
+  font-size: 14px;
+  font-weight: bold;
+  background: #FEFEFE;
+  overflow-x: hidden;
 }
 
-.row{
-    margin-left: 0;
-    margin-right: 0;
+h1{
+  color: @tertiary;
 }
 
-.container{
-  .row{
-    margin-left: 0px;
-    margin-right: 0px;
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.container .row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.revolution-text {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.social-icon-container {
+  padding-top: 2em;
+	padding-right: 2em;
+  padding-bottom: 2em;
+}
+@media (min-width: 768px) {
+  .social-icon-container {
+    text-align: right;
   }
+}
+@media (max-width: 768px) {
+  .social-icon-container {
+    text-align: center;
+  }
+}
+.social-icon {
+  width: 2.7rem;
+  margin-left: 0.7rem;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.social-icon:hover {
+  width: 2.7rem;
+  margin-left: 0.7rem;
+  transform: scale(1.1);
+}
+.anim-delay-4 {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  -ms-animation-delay: 0.6s;
+  -o-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.anim-delay-1 {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -ms-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+.anim-delay-2 {
+  -webkit-animation-delay: 1.7s;
+  -moz-animation-delay: 1.7s;
+  -ms-animation-delay: 1.7s;
+  -o-animation-delay: 1.7s;
+  animation-delay: 1.7s;
+}
+.anim-delay-3 {
+  -webkit-animation-delay: 1.8s;
+  -moz-animation-delay: 1.8s;
+  -ms-animation-delay: 1.8s;
+  -o-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+.debug {
+  background-color: red;
+}
+.logo-image {
+  width: 30%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 20vh;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-duration: 5s;
+  -moz-animation-delay: 0.5s;
+  -ms-animation-duration: 5s;
+  -ms-animation-delay: 0.5s;
+  -o-animation-duration: 5s;
+  -o-animation-delay: 0.5s;
+  animation-duration: 5s;
+  animation-delay: 0.5s;
+}
+.center-text {
+  text-align: center;
+}
+.right-text {
+  text-align: right;
+}
+.large-background-image {
+  background: url('../img/krinkel.png') center center no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.full-screen{
+  min-height: 100vh;
+}
+
+p {
+  font-size: 1rem;
+}
+.btn-default {
+  border-color: #00BF8C;
+  background-color: #00BF8C;
+  color: #FEFEFE;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.btn-default:hover {
+  border-color: #00a679;
+  background-color: #00a679;
+  color: #FEFEFE;
+  transform: scale(1.1);
+}
+.designer {
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .designer {
+    width: 50%;
+    margin-top: 9rem;
+  }
+}
+@media (max-width: 768px) {
+  .designer {
+    width: 40%;
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 2em;
+  }
+}
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 3rem;
+    text-align: left;
+    margin-top: 0em;
+    margin-left: -20px;
+  }
+}
+.subtitle::first-letter {
+  color: #00BF8C;
+}
+.content-block {
+  background-color: #FEFEFE;
+}
+@media (min-width: 768px) {
+  .content-block-main {
+    margin-top: 10em;
+    margin-bottom: 6em;
+  }
+}
+@media (max-width: 768px) {
+  .content-block-main {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+}
+.content-block-main p {
+  font-weight: 100;
+}
+@media (max-width: 768px) {
+  .content-block-main p {
+    font-size: 1.0rem;
+  }
+}
+@media (min-width: 768px) {
+  .content-block-main p {
+    margin-top: 4rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
+}
+.footer {
+  background-color: @five;
+  min-height: 10vh;
+}
+.disclaimer {
+  color: #B5B3B3;
+  font-style: italic;
+  font-weight: 100;
+  margin-top: 0.3rem !important;
+}
+@media (max-width: 768px) {
+  .disclaimer {
+    font-size: 0.7rem !important;
+  }
+}
+@media (min-width: 768px) {
+  .disclaimer {
+    font-size: 0.9rem !important;
+  }
+}
+input[type=email] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+  font-size: 1rem;
+}
+input[type=email].ng-invalid.ng-touched {
+  border-bottom: 1px solid red;
+}
+input[type=email]:focus {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+}
+input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  line-height: 2rem;
+}
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  line-height: 2rem;
+}
+input::-o-placeholder {
+  /* Mozilla Firefox 19+ */
+  line-height: 2rem;
+}
+input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  line-height: 2rem;
+}
+.validation-error {
+  color: red;
+  font-size: 0.9rem !important;
+}
+.no-js #loader {
+  display: none;
+}
+.js #loader {
+  display: block;
+  position: absolute;
+  left: 100px;
+  top: 0;
+}
+.se-pre-con {
+  min-width: 100%;
+  min-height: 10vh;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  text-align: center;
+}
+.uil-ripple {
+  display: block;
+  margin: 10rem auto;
+}
+.loader-text {
+  font-weight: 100;
+  font-size: 2rem;
+}
+.subscribe {
+  margin-bottom: 2rem;
 }

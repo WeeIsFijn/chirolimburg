@@ -11,7 +11,7 @@
       dashboard_src: './frontend_dash',
       dashboard_dev: './frontend_dash_dev',
       dashboard_dist: './frontend_dash_dist',
-      bootstrap_dist: './bower_components/bootstrap/dist',
+      bootstrap_dist: './frontend_client/bower_components/bootstrap/dist',
 
       // see https://github.com/gruntjs/grunt-contrib-connect
       connect: {
@@ -78,8 +78,7 @@
             paths: ['<%= frontend_src %>/less/']
           },
           files: {
-            "<%= frontend_dev %>/css/main.css": "<%= frontend_src %>/less/main.less",
-            "<%= frontend_dev %>/css/responsive.css": "<%= frontend_src %>/less/responsive.less"
+            "<%= frontend_dev %>/css/main.css": "<%= frontend_src %>/less/main.less"
           }
         },
         dashboard: {
@@ -87,8 +86,7 @@
             paths: ['<%= dashboard_src %>/less/']
           },
           files: {
-            "<%= dashboard_dev %>/css/main.css": "<%= dashboard_src %>/less/main.less",
-            "<%= dashboard_dev %>/css/responsive.css": "<%= dashboard_src %>/less/responsive.less"
+            "<%= dashboard_dev %>/css/main.css": "<%= dashboard_src %>/less/main.less"
           }
         }
       },
@@ -138,21 +136,8 @@
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('build-bootstrap', function() {
-        var cb = this.async();
-        grunt.util.spawn({
-            grunt: true,
-            args: ['dist'],
-            opts: {
-                cwd: 'bower_components/bootstrap'
-            }
-        }, function(error, result, code) {
-            console.log(result.stdout);
-            cb();
-        });
-    });
-
-    grunt.registerTask('default', ['copy:dev', 'less:dev', 'build-bootstrap', 'copy:bootstrapDev', 'connect:dev', 'watch:livereload']);
+    grunt.registerTask('default', ['copy:dev', 'less:dev', 'connect:dev', 'watch:livereload']);
+    grunt.registerTask('dash', ['copy:dashboard', 'less:dashboard', 'connect:dashboard', 'watch:dashboard']);
 
   };
 })();

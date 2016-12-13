@@ -19,21 +19,90 @@
   </head>
 
   <body>
-    <div class="container-fluid large-background-image">
-      <div class="col-xs-12 col-sm-6 col-sm-offset-3 full-screen">
-        <img src="img/chirolimburg.png" class="logo-image animated bounceIn">
-        <h1 class="animated bounceIn center-text">Chiro</h1>
-        <h1 class="animated bounceIn center-text">Limburg</h1>
+    <section id="header">
+      <div class="container-fluid large-background-image">
+        <!-- image carousel-->
+        <div id="carousel" class="carousel slide carousel-fade container" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+          </ol>
+          <!-- Carousel items -->
+          <div class="carousel-inner">
+            <div class="active item">
+              <img src="img/krinkel.png" class="full-screen">
+              <div class="carousel-caption">
+                <h3>KIC 1 @ChiroLimburg</h3>
+              </div>
+            </div>
+            <div class="item"></div>
+            <div class="item"></div>
+          </div>
+          <!-- Carousel nav -->
+          <a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
+          <a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
+        </div>
+        <!-- Chiro Limburg logo -->
+        <span class="col-xs-12 col-sm-6 col-sm-offset-3 full-screen overlay">
+          <img src="img/chirolimburg.png" class="logo-image animated bounceIn">
+          <h1 class="animated bounceIn center-text">Chiro</h1>
+          <h1 class="animated bounceIn center-text">Limburg</h1>
+        </span>
+        <!-- inschrijf form-->
         <div class="center-text">
-          <form>
+          <form class="bottom">
             <div class="col-sm-8">
               <input type="email" class="form-control" id="email" placeholder="Enter email">
             </div>
-            <input type="button" class="btn btn-default col-sm-4" value="Inschrijven">
+            <input type="button" class="btn btn-default col-sm-4" value="Inschrijven voor... ">
           </form>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section id="info">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Over Chiro Limburg</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-diamond text-primary sr-icons" class:"info-dev" ></i>
+                        <h3>Sturdy Templates</h3>
+                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons" class:"info-dev"></i>
+                        <h3>Ready to Ship</h3>
+                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-newspaper-o text-primary sr-icons" class:"info-dev"></i>
+                        <h3>Up to Date</h3>
+                        <p class="text-muted">We update dependencies to keep things fresh.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-heart text-primary sr-icons" class:"info-dev"></i>
+                        <h3>Made with Love</h3>
+                        <p class="text-muted">You have to make your websites with love these days!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div class="footer container-fluid">
       <div class="row social-icon-container center-text">
@@ -53,6 +122,7 @@
 
     <script src="js/main.js"></script>
     <script src="app/chirolim.module.js"></script>
+
   </body>
 
 </html>

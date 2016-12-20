@@ -39,6 +39,7 @@ h1{
 	padding-right: 2em;
   padding-bottom: 2em;
 }
+
 @media (min-width: 768px) {
   .social-icon-container {
     text-align: right;
@@ -302,4 +303,84 @@ input:-ms-input-placeholder {
 }
 .subscribe {
   margin-bottom: 2rem;
+}
+
+.info-dev{
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+  -webkit-trnsition: webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+  transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+}
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
+.carousel{
+  height: auto;
+  width: auto;
+  margin-top: 10vh;
+}
+
+.carousel-inner{
+  height: auto;
+  width: auto;
+}
+
+.item {
+    height: 80vh;
+    width: auto;
+}
+
+.item:nth-child(1) {
+    background: #74C390;
+}
+
+.item:nth-child(2) {
+    background: #51BCE8;
+}
+
+.item:nth-child(3) {
+    background: #E46653;
+}
+
+.overlay{
+    position: absolute;
+    top: 1vh;
+}
+
+.bottom{
+  position: absolute;
+  bottom: 10px;
+  width: 100vh;
 }

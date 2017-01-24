@@ -7,7 +7,9 @@
 @tertiary: #FEFEFE;
 @four: #B5B3B3;
 @five: #E8B727;
-@orange: #E8B727;
+@orange: #f6b82e;
+@blue: #50e3c2;
+@pink: #e06a78;
 
 //Core Styles
 body {
@@ -21,6 +23,16 @@ body {
 
 h1{
   color: @tertiary;
+}
+
+.background-blue{
+  background-color: @blue;
+  width: 100%;
+}
+
+.background-pink{
+  background-color: @pink;
+  width: 100%;
 }
 
 .background-orange{
@@ -353,10 +365,13 @@ input:-ms-input-placeholder {
     }
 }
 
-.carousel{
+/*.carousel{
   height: auto;
   width: auto;
   margin-top: 10vh;
+}*/
+.carousel-indicators-team{
+  margin-bottom: 10vh;
 }
 
 .carousel-inner{
@@ -368,7 +383,7 @@ input:-ms-input-placeholder {
     height: 80vh;
     width: auto;
 }
-
+/*
 .item:nth-child(1) {
     background: #74C390;
 }
@@ -379,7 +394,7 @@ input:-ms-input-placeholder {
 
 .item:nth-child(3) {
     background: #E46653;
-}
+}*/
 
 .overlay{
     position: absolute;
@@ -390,4 +405,22 @@ input:-ms-input-placeholder {
   position: absolute;
   bottom: 10px;
   width: 100vh;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    img {
+        margin: 0 auto;
+        border: 7px solid white;
+    }
+    h4 {
+        margin-top: 25px;
+        margin-bottom: 0;
+        text-transform: none;
+    }
+    p {
+        margin-top: 0;
+    }
 }

@@ -146,7 +146,7 @@
               </div>
           </div>
           <div id="uitleenMateriaal" class="row">
-              
+
           </div>
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -199,15 +199,18 @@
 
       <!-- Uitleen items: -->
       var circuskoffer = {name:"Circuskoffer", waarborg:"€ 25,00", img:"img/uitleen/circuskoffer.png"};
-      var ehboKoffer = {name:"EHBO-koffer", waarborg:"€ 5,00", img:"img/uitleen/ehboKoffer.png"};
-      var kleineKnutsel = {name:"Kleine knutselkoffer", waarborg:"€ 5,00", img:"img/uitleen/kleineKnutsel.png"};
-      var groteKnutsel = {name:"Grote knutselkoffer", waarborg:"€ 25,00", img:"img/uitleen/groteKnutsel.png"};
-      var spellenKoffer = {name:"Spellenkoffer", waarborg:"€ 5,00 per spel", img:"img/uitleen/spellenKoffer.png"};
-      var sfeervlaggen = {name:"Sfeervlaggen Chiro", waarborg:"€ 10,00 per vlag", img:"img/uitleen/sfeervlaggen.png"};
-      var baches = {name:"Bekendmakingsbaches (vb. jaarthema, chirologo)", waarborg:"€ 10,00 per bache", img:"img/uitleen/baches.png"};
+      var ehboKoffer = {name:"EHBO-koffer", waarborg:"€ 5,00", img:"img/uitleen/ehbokoffer.png"};
+      var kleineKnutsel = {name:"Kleine knutselkoffer", waarborg:"€ 5,00", img:"img/uitleen/kleineknutsel.png"};
+      var groteKnutsel = {name:"Grote knutselkoffer", waarborg:"€ 25,00", img:"img/uitleen/groteknutsel.png"};
+      var spellenKoffer = {name:"Spellenkoffer", waarborg:"€ 5,00 per spel", img:"img/uitleen/spellenkoffer.png"};
+      var sfeervlaggen = {name:"Sfeervlaggen", waarborg:"€ 10,00 per vlag", img:"img/uitleen/sfeervlaggen.png"};
+      var baches = {name:"Baches", waarborg:"€ 10,00 per bache", img:"img/uitleen/bache.png"};
+      var bib = {name:"Bibliotheek (vb. Afdelingsboeken, tochttechnieken, spelfiches, ...)", waarborg:"€ 5,00 per boek", img:"img/uitleen/bib.png"};
       var badgemachine = {name:"Badgemachine", waarborg:"enkel te gebruiken op de Vaartstraat", img:"img/uitleen/badgemachine.png"};
+      var zangboekjes = {name:"Zangboekjes", waarborg:"€ 1,00 per boekje", img:"img/uitleen/zang.png"};
+      var kalei = {name:"Materiaalkot Kalei", waarborg:"€ 100,00", img:"img/uitleen/kalei.png"};
       var grotezaal = {name:"Grote vergaderzaal", waarborg:"Gratis", img:"img/uitleen/grotezaal.png"};
-      var uitleenMateriaal = [circuskoffer, ehboKoffer, kleineKnutsel, groteKnutsel, spellenKoffer, sfeervlaggen,baches, badgemachine, grotezaal];
+      var uitleenMateriaal = [circuskoffer, ehboKoffer, kleineKnutsel, groteKnutsel, spellenKoffer, sfeervlaggen, baches, badgemachine, grotezaal, zangboekjes, bib,kalei];
 
       $(document).ready(function(){
           addCarouselelements(team);
@@ -258,7 +261,7 @@
       function addUitleenMateriaal(list){
         for(i = 0; i < list.length; i++){
           var item = list[i];
-          $('<div class="col-sm-4"><div class="uitleen-item"><img src="'+item.img+'" class="img-responsive " alt=""><h4>'+item.name+'</h4><p class="text-muted">Waarborg: '+item.waarborg+'</p></div></div>').appendTo('#uitleenMateriaal');
+          $('<div class="col-sm-4"><div class="uitleen-item"><img src="'+item.img+'" class="img-responsive" alt=""><h4>'+item.name+'</h4><p class="text-muted">Waarborg: '+item.waarborg+'</p></div></div>').appendTo('#uitleenMateriaal');
         }
       }
     </script>

@@ -160,6 +160,29 @@
       </div>
     </section>
 
+    <section id="mapSection">
+      <div class="container background-orange wrap" >
+        <div id="map" class="center-text">
+          <script>
+            function initMap() {
+              var uluru = {lat: -25.363, lng: 131.044};
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru
+              });
+              var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+              });
+            }
+          </script>
+          <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoTxUg93tULeN21XUCi5VTL97HN_vLQfs&callback=initMap">
+          </script>
+        </div>
+      </div>
+    </section>
+
     <section id="footer">
       <div class="footer container-fluid">
         <div class="row social-icon-container center-text">
@@ -173,6 +196,8 @@
         </div>
       </div>
     </section>
+
+
 
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

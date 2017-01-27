@@ -108,6 +108,7 @@
             {expand: true, cwd: '<%= frontend_src %>/', src: ['**.html'], dest: '<%= frontend_dev %>/'},
             {expand: true, cwd: '<%= frontend_src %>/', src: ['**/*.html'], dest: '<%= frontend_dev %>/'},
             {expand: true, cwd: '<%= frontend_src %>/', src: ['**/*.js'], dest: '<%= frontend_dev %>/'},
+            {expand: true, cwd: '<%= frontend_src %>/', src: ['**/*.css'], dest: '<%= frontend_dev %>/'},
             {expand: true, cwd: '<%= frontend_src %>/', src: ['fonts/**'], dest: '<%= frontend_dev %>/'},
             {expand: true, cwd: '<%= frontend_src %>/', src: ['img/**'], dest: '<%= frontend_dev %>/'},
             {expand: true, cwd: '<%= frontend_src %>/', src: ['css/**'], dest: '<%= frontend_dev %>/'},

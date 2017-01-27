@@ -6,9 +6,9 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="Hive">
+    <meta name="author" content="Chiro Limburg">
 		<title>Chiro Limburg</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="fonts/font-awesome.min.css" type="text/css" media="screen">
     <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
@@ -18,18 +18,19 @@
     <!-- TODO: Add analytics -->
   </head>
 
+
   <body>
     <section id="header">
       <div class="container-fluid large-background-image">
         <!-- image carousel-->
-        <div id="carousel" class="carousel slide carousel-fade container" data-ride="carousel">
+        <!--<div id="carousel" class="carousel slide carousel-fade container" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#carousel" data-slide-to="0" class="active"></li>
             <li data-target="#carousel" data-slide-to="1"></li>
             <li data-target="#carousel" data-slide-to="2"></li>
-          </ol>
+          </ol>-->
           <!-- Carousel items -->
-          <div class="carousel-inner">
+          <!--<div class="carousel-inner">
             <div class="active item">
               <img src="img/krinkel.png" class="full-screen">
               <div class="carousel-caption">
@@ -38,20 +39,25 @@
             </div>
             <div class="item"></div>
             <div class="item"></div>
-          </div>
+          </div>-->
           <!-- Carousel nav -->
-          <a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
+          <!--<a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
           <a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
-        </div>
+        </div>-->
         <!-- Chiro Limburg logo -->
         <span class="col-xs-12 col-sm-6 col-sm-offset-3 full-screen overlay">
           <img src="img/chirolimburg.png" class="logo-image animated bounceIn">
           <h1 class="animated bounceIn center-text">Chiro</h1>
           <h1 class="animated bounceIn center-text">Limburg</h1>
         </span>
-        <!-- inschrijf form-->
+      </div>
+    </section>
+
+    <section id="inschrijfbalk">
+      <!-- inschrijf form-->
+      <div class="container background-orange">
         <div class="center-text">
-          <form class="bottom">
+          <form >
             <div class="col-sm-8">
               <input type="email" class="form-control" id="email" placeholder="Enter email">
             </div>
@@ -112,24 +118,93 @@
         </div>
     </section>
 
-    <div class="footer container-fluid">
-      <div class="row social-icon-container center-text">
-        <ul class="list-inline">
-          <li><a href="mailto:regioLIM@chiro.be"><img src="img/envelope.png" class="social-icon animated fadeInDown anim-delay-1"></a></li>
-          <li><a href="https://www.facebook.com/ChiroLimburg/?fref=ts"><img src="img/facebook.png" class="social-icon animated fadeInDown anim-delay-1"></a></li>
-          <li><a href="https://twitter.com/ChiroLimburg"><img src="img/twitter.png" class="social-icon animated fadeInDown anim-delay-1"></a></li>
-          <li><a href="https://www.instagram.com/chirolimburgkrinkelt/"><img src="img/instagram.png" class="social-icon animated fadeInDown anim-delay-1"></a></li>
-          <li><a href="https://www.snapchat.com/add/chirolimburg"><img src="img/snapchat.png" class="social-icon animated fadeInDown anim-delay-1"></a></li>
-        </ul>
+    <section id="team">
+        <div class="container background-blue">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Ons team:</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div id="teamCarousel" class="carousel carousel-team slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators ">
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="uitleendienst">
+      <div class="container background-pink">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2 class="section-heading">Geef jou activiteiten meer kleur, met materiaal uit onze uitleendienst!</h2>
+              </div>
+          </div>
+          <div id="uitleenMateriaal" class="row">
+
+          </div>
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <h4 class="large text-muted">Iets uitlenen?</h4>
+                  <form >
+                    <input id="uitleenButton" type="button" class="btn btn-default center" value="uitlenen ">
+                  </form>
+              </div>
+          </div>
       </div>
-    </div>
+    </section>
+
+    <section id="mapSection">
+      <div class="container background-orange wrap" >
+        <div id="map" class="center-text">
+          <script>
+            function initMap() {
+              var uluru = {lat: -25.363, lng: 131.044};
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru
+              });
+              var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+              });
+            }
+          </script>
+          <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoTxUg93tULeN21XUCi5VTL97HN_vLQfs&callback=initMap">
+          </script>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="footer container-fluid">
+        <div class="row social-icon-container center-text">
+          <ul class="list-inline">
+            <li><a href="mailto:regioLIM@chiro.be"><img src="img/envelope.png" class="social-icon animated fadeInDown anim-delay-1"></a></li>
+            <li><a href="https://www.facebook.com/ChiroLimburg/?fref=ts"><img src="img/facebook.png" class="social-icon animated fadeInDown anim-delay-1"></a></li>
+            <li><a href="https://twitter.com/ChiroLimburg"><img src="img/twitter.png" class="social-icon animated fadeInDown anim-delay-1"></a></li>
+            <li><a href="https://www.instagram.com/chirolimburgkrinkelt/"><img src="img/instagram.png" class="social-icon animated fadeInDown anim-delay-1"></a></li>
+            <li><a href="https://www.snapchat.com/add/chirolimburg"><img src="img/snapchat.png" class="social-icon animated fadeInDown anim-delay-1"></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
 
     <script src="js/jquery-2.1.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
-
     <script src="js/main.js"></script>
-    <script src="app/chirolim.module.js"></script>
+    <script>
+    </script>
 
   </body>
 

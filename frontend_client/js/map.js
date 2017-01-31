@@ -14,28 +14,32 @@ function initMap() {
     map: map
   });
 
-  var contentStringBanier = '<div class="info-window">' +
-                '<h3>De Banier</h3>' +
-                '<div class="info-content">' +
-                '<p>Hier moet nog nader te bepalen info komen!</p>' +
-                '</div>' +
-                '</div>';
+  var contentStringBanier = '<div class="row">' +
+                                '<div class="col-lg-12 text-center">' +
+                                  '<img src="img/chirologo.png" class="col-md-3"></img>' +
+                                    '<div class="col-md-9">' +
+                                      '<h2 class="section-heading">De Banier</h2>' +
+                                      '<p>Hier nog ewa info!</p>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>';
 
-  var contentStringKalei = '<div class="info-window">' +
-                '<h3>De Kalei</h3>' +
-                '<div class="info-content">' +
-                '<p>Hier moet nog nader te bepalen info komen!</p>' +
-                '</div>' +
-                '</div>';
+  var contentStringKalei = '<div class="row">' +
+                                '<div class="col-lg-12 text-center">' +
+                                  '<img src="img/chirologo.png" class="col-md-3"></img>' +
+                                    '<div class="col-md-9">' +
+                                      '<h2 class="section-heading">De Kalei</h2>' +
+                                      '<p>Hier nog ewa info!</p>' +
+                                    '</div>' +
+                                '</div>' +
+                            '</div>';
 
   var infowindowBanier = new google.maps.InfoWindow({
       content: contentStringBanier,
-      maxWidth: 400
   });
 
   var infowindowKalei = new google.maps.InfoWindow({
       content: contentStringKalei,
-      maxWidth: 400
   });
 
   markerBanier.addListener('click', function () {

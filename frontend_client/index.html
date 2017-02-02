@@ -12,8 +12,10 @@
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="fonts/font-awesome.min.css" type="text/css" media="screen">
     <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
-    <link href="css/main.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 
     <!-- TODO: Add analytics -->
   </head>
@@ -51,7 +53,7 @@
 
     <section id="inschrijfbalk">
       <!-- inschrijf form-->
-      <div class="container background-orange row">
+      <div class="container background-orange">
         <div class="center-text">
           <form >
             <div class="col-sm-8">
@@ -65,8 +67,117 @@
 
     <section id="form">
       <div class="collapse" id="collapseForm">
-        <div card card-blok>
-            <img src="img/chirolimburg.png" class="logo-image animated bounceIn">
+        <div class="container background-orange" ng-view="">
+          <register type="participant" class="">
+            <div class="row">
+              <h1 class="center-text">Vul hier verder jou gegevens in:</h1>
+              <p class="flow-text center-text">
+                <i class="material-icons">info_outline</i>
+                  Velden met een "*"-symbool zijn verplicht.
+              </p>
+          </div>
+
+
+          <div class="row">
+              <form class="col s12 m12 " name="personForm">
+                  <div class="row">
+                      <div class="input-field col s12 m6">
+                          <i class="material-icons prefix">perm_identity</i>
+                          <input id="first_name" name="firstName" class="validate" required="" type="text">
+                          <label for="first_name" class="active">Voornaam *</label>
+                      </div>
+
+                      <div class="input-field col s12 m6">
+                          <i class="material-icons prefix">perm_identity</i>
+                          <input id="first_name" name="firstName" class="validate" required="" type="text">
+                          <label for="first_name" class="active">Achternaam *</label>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="input-field col s12 m6">
+                          <i class="material-icons prefix">date_range</i>
+                          <input id="date_of_birth" name="birthdate" class="validate"required="" type="text">
+                          <label for="date_of_birth" class="active">Geboortedatum (dd-mm-jjjj) *</label>
+                      </div>
+
+                      <div class="input-field col s12 m6">
+                          <i class="material-icons prefix">email</i>
+                          <input id="email" name="email" class="validate ng-pristine ng-untouched ng-valid-email ng-valid-pattern ng-not-empty ng-valid ng-valid-required" ng-model="$ctrl.newPerson.email" ng-pattern="/^[-a-z0-9~!$%^&amp;*_=+}{\'?]+(\.[-a-z0-9~!$%^&amp;*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i" required="" type="email">
+                          <label for="email" class="active">Email *</label>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="input-field col s12">
+                          <i class="material-icons prefix">home</i>
+                          <!--$ctrl.newPerson.street-->
+                          <input name="street" class="validate" id="street" required="" type="text">
+                          <label for="street" class="active">Straat en huisnummer *</label>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="input-field col m4 s12">
+                          <i class="material-icons prefix">home</i>
+                          <input id="postal_code" class="validate"  required="" type="text">
+                          <label for="postal_code" class="active">Postcode *</label>
+                      </div>
+
+                      <div class="input-field col m4 s12">
+                          <i class="material-icons prefix">home</i>
+                          <input id="postal_code" class="validate"  required="" type="text">
+                          <label for="postal_code" class="active">Gemeente *</label>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="input-field col s12">
+                          <i class="material-icons prefix">phone</i>
+                          <input title="" id="phone" name="phone" class="validate" required="" type="tel">
+                          <label for="phone" class="active">Telefoon (+324xxxxxxxx) *</label>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="input-field col s12">
+                          <!--<i class="material-icons prefix">restaurant</i>-->
+
+                          <select name="eatingHabbits" class="browser-default" required="">
+                              <option value="" disabled="" selected="selected">Eetgewoonten *</option>
+                              <option value="VEGI">Ik ben vegetariër</option>
+                              <option value="HALAL">Ik eet vis en vlees, maar halal</option>
+                              <option value="FISHANDMEAT">Ik eet vis en vlees</option>
+                          </select>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="input-field col s12">
+                          <i class="material-icons prefix">restaurant</i>
+                          <textarea placeholder="Zijn er zaken waar we bij maaltijden aandacht aan moeten besteden? Geef hier aan of je bepaalde voedselallergieën hebt. (max. 256)" name="dietary" id="dietary" class="materialize-textarea"></textarea>
+                          <label for="dietary" class="active">Opmerkingen maaltijd</label>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="input-field col s12">
+                          <i class="material-icons prefix">mode_edit</i>
+                          <textarea name="others" id="others" class="materialize-textarea"></textarea>
+                          <label for="others">Andere opmerkingen (max. 256)</label>
+                      </div>
+                  </div>
+                <p>Indien er nog vragen zijn, contacteer iemand van het verbond.</p>
+
+                  <div >
+                    <input type="button" class="btn btn-default col-sm-4" value="Inschrijven" data-toggle="collapse" data-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm">
+                  </div>
+              </form>
+
+              <!--Don't remove this! This is a hacky way to call the Materialize function to initialize textfields after the DOM has rendered.-->
+              <div ng-show="$ctrl.functionCallAfterDOMRender()" class="ng-hide"></div>
+          </div>
+          </register>
         </div>
       </div>
     </section>
@@ -189,6 +300,7 @@
 
 
     <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/materialize.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="js/main.js"></script>

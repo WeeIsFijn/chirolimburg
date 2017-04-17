@@ -79,7 +79,10 @@
           },
           files: {
             "<%= frontend_dev %>/css/main.css": "<%= frontend_src %>/less/main.less",
-            "<%= frontend_dev %>/css/subscribe.css": "<%= frontend_src %>/less/subscribe.less"
+            "<%= frontend_dev %>/css/colors.css": "<%= frontend_src %>/less/colors.less",
+            "<%= frontend_dev %>/css/subscribe.css": "<%= frontend_src %>/less/subscribe.less",
+            "<%= frontend_dev %>/css/socialmedia.css": "<%= frontend_src %>/less/socialmedia.less",
+            "<%= frontend_dev %>/css/uitleen.css": "<%= frontend_src %>/less/uitleen.less"
           }
         },
         dashboard: {

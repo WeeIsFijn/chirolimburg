@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="fonts/font-awesome.min.css" type="text/css" media="screen">
     <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
     <link href="css/animate.min.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 
@@ -51,17 +50,18 @@
       </div>
     </section>
 
-    <section id="inschrijfbalk">
-      <!-- inschrijf form-->
-      <div class="container background-orange">
-        <div class="center-text">
-          <form >
-            <div class="col-sm-8">
-              <input type="email" class="form-control" id="email_first" placeholder="Enter email">
-            </div>
-            <input type="button" class="btn btn-default col-sm-4" id="btnInschrijf" value="Inschrijven voor... " data-toggle="collapse" data-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm">
-            <script src="js/form.js"></script>
-          </form>
+    <!-- inschrijf form-->
+    <section id="inschrijfbalk" class="background-yellow">
+      <div class="subscribe-container">
+        <div class="row">
+          <div class="col-sm-4 col-sm-4"> <img src="./img/subscribe.png"> <strong>Schrijf je in voor de gewestenraad:</strong></div>
+          <div class="col-sm-3 col-sm-3"> <input type="email" class="form-control" id="email_first" placeholder="Email"></div>
+          <div class="col-sm-5 col-sm-5"> 
+            <input type="button" class="btn btn-default col-sm-4" id="btnInschrijf" value="Inschrijven" /> 
+            <input type="button" class="btn btn-default col-sm-4" id="btnInschrijf" value="Info" /></div>
+        </div>
+        <div class="row">
+          <p>We vinden het belangrijk om zorgvuldig om te springen met je persoonlijke informatie. Lees onze privacyverklaring voor meer informatie.</p>
         </div>
       </div>
     </section>
@@ -179,6 +179,38 @@
               <div ng-show="$ctrl.functionCallAfterDOMRender()" class="ng-hide"></div>
           </div>
           </register>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL MEDIA-->
+    <section id="social-media">
+      <div class="container">
+        <div class="row center-text">
+          <img src="img/speaker.png">
+          <h2>Wat jullie zeggen op Facebook:</h2>
+        </div>
+      </div>
+      <div class="row center-text background-light border">
+        <h3>Hier komt een quote uit facebook. Hier komt een quote uit facebook. Hier komt een quote uit facebook. Hier komt een quote uit facebook. Hier komt een quote uit facebook.</h3>
+      </div>
+      <div class="row center-text">
+        <p>Laat van je horen! Gebruik @ChiroLimburg in je posts.</p>
+      </div>
+    </section>
+
+
+    <!-- UITLEENDIENST-->
+    <section id="uitleen">
+      <div class="container">
+        <div class="row center-text">
+          <img src="img/coloredcircles.png">
+          <h2>Geef je activiteiten kleur, <br /> met materiaal uit onze uitleendienst!</h2>
+        </div>
+        <div class="row center-text">
+          <div class="col-xs-4 col-sm-4"><img src="img/uitleen/bache.png" class="material-image"></div>
+          <div class="col-xs-4 col-sm-4"><img src="img/uitleen/bache.png" class="material-image"></div>
+          <div class="col-xs-4 col-sm-4"><img src="img/uitleen/bache.png" class="material-image"></div>
         </div>
       </div>
     </section>

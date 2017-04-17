@@ -1,5 +1,7 @@
 //Load The Roboto Font
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald:400,700|Permanent+Marker|Nunito:300,400');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald:200,300,400,500,600,700"|Permanent+Marker|Nunito:300,400');
+
+@import 'subscribe.less';
 
 // Colors
 @primary: #00BF8C;
@@ -11,6 +13,8 @@
 @blue: #3DD6B4;
 @pink: #e06a78;
 @white: #FFFFFF;
+@yellow: #FDC15F;
+@dark-text: #434343;
 
 // Core Styles
 body {
@@ -174,22 +178,7 @@ body {
 p {
   font-size: 1rem;
 }
-.btn-default {
-  border-color: #00BF8C;
-  background-color: #00BF8C;
-  color: #FEFEFE;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-.btn-default:hover {
-  border-color: #00a679;
-  background-color: #00a679;
-  color: #FEFEFE;
-  transform: scale(1.1);
-}
+
 .designer {
   display: block;
   margin: 0 auto;
@@ -274,48 +263,7 @@ p {
     font-size: 0.9rem !important;
   }
 }
-input[type=email] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #ddd;
-  background: transparent;
-  font-size: 1rem;
-}
-input[type=email].ng-invalid.ng-touched {
-  border-bottom: 1px solid red;
-}
-input[type=email]:focus {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #ddd;
-  background: transparent;
-}
-input::-webkit-input-placeholder {
-  /* WebKit browsers */
-  line-height: 2rem;
-}
-input:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  line-height: 2rem;
-}
-input::-o-placeholder {
-  /* Mozilla Firefox 19+ */
-  line-height: 2rem;
-}
-input:-ms-input-placeholder {
-  /* Internet Explorer 10+ */
-  line-height: 2rem;
-}
+
 .validation-error {
   color: red;
   font-size: 0.9rem !important;

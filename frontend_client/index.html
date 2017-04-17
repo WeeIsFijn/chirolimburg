@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="fonts/font-awesome.min.css" type="text/css" media="screen">
     <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
     <link href="css/animate.min.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 
@@ -51,17 +50,18 @@
       </div>
     </section>
 
-    <section id="inschrijfbalk">
+    <section id="inschrijfbalk" class="background-yellow">
       <!-- inschrijf form-->
-      <div class="container background-orange">
-        <div class="center-text">
-          <form >
-            <div class="col-sm-8">
-              <input type="email" class="form-control" id="email_first" placeholder="Enter email">
-            </div>
-            <input type="button" class="btn btn-default col-sm-4" id="btnInschrijf" value="Inschrijven voor... " data-toggle="collapse" data-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm">
-            <script src="js/form.js"></script>
-          </form>
+      <div class="subscribe-container">
+        <div class="row">
+          <div class="col-sm-4 col-sm-4"> <img src="./img/subscribe.png"> <strong>Schrijf je in voor de gewestenraad:</strong></div>
+          <div class="col-sm-3 col-sm-3"> <input type="email" class="form-control" id="email_first" placeholder="Email"></div>
+          <div class="col-sm-5 col-sm-5"> 
+            <input type="button" class="btn btn-default col-sm-4" id="btnInschrijf" value="Inschrijven" /> 
+            <input type="button" class="btn btn-default col-sm-4" id="btnInschrijf" value="Info" /></div>
+        </div>
+        <div class="row">
+          <p>We vinden het belangrijk om zorgvuldig om te springen met je persoonlijke informatie. Lees onze privacyverklaring voor meer informatie.</p>
         </div>
       </div>
     </section>

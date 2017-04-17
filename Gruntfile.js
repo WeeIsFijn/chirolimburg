@@ -78,7 +78,8 @@
             paths: ['<%= frontend_src %>/less/']
           },
           files: {
-            "<%= frontend_dev %>/css/main.css": "<%= frontend_src %>/less/main.less"
+            "<%= frontend_dev %>/css/main.css": "<%= frontend_src %>/less/main.less",
+            "<%= frontend_dev %>/css/subscribe.css": "<%= frontend_src %>/less/subscribe.less"
           }
         },
         dashboard: {

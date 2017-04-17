@@ -22,10 +22,6 @@ body {
   overflow-x: hidden;
 }
 
-h1{
-  color: @tertiary;
-}
-
 .background-blue{
   background-color: @blue;
   width: 100%;
@@ -38,8 +34,7 @@ h1{
 
 .background-orange{
   background-color: @orange;
-  width: auto;
-  height: 10vh;
+  width: 100%;
 }
 
 .row {
@@ -47,8 +42,8 @@ h1{
   margin-right: 0;
 }
 .container .row {
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 // Title page
@@ -260,7 +255,7 @@ p {
   }
 }
 .footer {
-  background-color: @five;
+  background-color: @orange;
   min-height: 10vh;
 }
 .disclaimer {
@@ -476,7 +471,8 @@ input:-ms-input-placeholder {
 }
 
 #map {
-
+  display: block;
+  margin: 0 auto;
   height: 400px;
   width: 400px;
 };
